@@ -10,8 +10,6 @@ function tipo_triangulo(a,b,c)
 end
 tipo_triangulo(3,4,3)
 
-if i % 3 == 0
-    x=[x ; i]
 
 
 
