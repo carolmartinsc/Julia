@@ -1,4 +1,4 @@
-###################### Exercícios de Controle e Fluxo e Funções #############################
+###################### Exercícios de Controle de Fluxo #############################
 #1)
 function tipo_triangulo(a,b,c)
     if a==b & a==c & b==c
@@ -224,7 +224,46 @@ soma
 
 s35=((y[1]+y[35])*35)/2
 
+#c)
+n=0
+for i in 1:length(y)
+    if y[i]%4==0
+       global n=n+1
+    end
+end
+n
+
 #d)
+n=0
+for i in 1:length(y)
+    if y[i]%4==0 && y[i]%5==0
+        global n = n+1
+    end
+end
+n
+
+#e)
+n=0
+for i in 1:length(y)
+    if y[i]%4==0 || y[i]%5==0
+        global n = n+1
+    end
+end
+n
+
+#f)
+x=Vector(undef, length(y))
+for i in 1:length(y)
+    if y[i]%2==0
+        x[i]=y[i]
+    else
+        x[i]=0
+    end
+end
+x
+
+
+
 
 
 
