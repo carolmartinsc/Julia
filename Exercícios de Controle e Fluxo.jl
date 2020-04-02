@@ -130,11 +130,105 @@ L2[3]
 L2[6]
 
 #c)
-L3=Vector(undef, 10)
+L3=collect(Union{Array, Int64},1:10) #um vetor que pode guardar vetores e inteiros
 for i in 1:10
-    for j in 1:100
-        if 
-        L3[i]=
+    n=1
+    j=i
+   while n < 10
+      j= j + 1
+      if j % i == 0
+         global L3[i]= [L3[i] ; j]
+         n=length(L3[i])
+      end  
+    end 
+end
+L3
+length(L3[1])
+L3[6]
+
+#d) MELHORAR!!!!
+L4=collect(Union{Array, Int64},2:2:20)
+for i in 1:10
+  n=1
+  j=1
+  while n < i
+      j= j + 1
+      if j % 2 == 0
+         L4[i]=[L4[i];j]
+         n=n+1
+      end
+    end
+end
+L4
+L4[3]
+length(L4[3])
+
+#e)
+using LinearAlgebra
+L5=collect(Union{Array, Int64},1:10)
+
+for i in 1:10
+    L5[i]=Matrix{Int64}(I,i,i)
+end
+L5
+L5[1]
+L5[3]
+L5[5]
+
+#6)
+#a)
+sum(L1)
+soma=0
+for i in 1:10
+    global soma=soma + L1[i]
+end
+soma
+
+#b)
+soma2=0
+for i in 1:length(L3)
+    soma1=sum(L3[i])
+    global soma2=soma2+soma1
+end
+soma2
+
+#7)
+#a)
+soma=Vector(undef,10)
+for i in 1:length(L4)
+    soma[i]=sum(L4[i])
+end
+soma
+
+#b) #pensar melhor 
+
+#c) depende do item b)
+
+#8) P.A
+#a)
+y=Vector(undef,100)
+x0= 2
+r=3
+y[1]=x0
+for i in 2:100
+    y[i]=y[i-1] + r
+end
+y
+
+#b)
+soma=0
+for i in 1:35
+    global soma=soma + y[i]
+end
+soma
+
+s35=((y[1]+y[35])*35)/2
+
+#d)
+
+
+
+
 
 
 
