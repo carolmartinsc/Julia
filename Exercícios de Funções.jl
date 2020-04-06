@@ -108,6 +108,48 @@ soma(x,y)=x+y
 soma(6,3)
 
 #4)
+#a)
+function matriz_pares_ímpares(n::Int64)
+    M=Matrix{Union{Missing, Int64}}(missing,n,n)
+    for i in 1:n
+        for j in 1:n
+            if i % 2 == 0
+                M[i,j]=2
+            else
+                M[i,j]=1
+            end
+        end
+    end
+    M
+end
+matriz_pares_ímpares(3)
+
+#b)
+function matriz_coluna(n)
+    M=Matrix{Union{Missing, Int64}}(missing,n,n)
+    for i in 1:n
+        for j in 1:n
+            M[j,i]=i
+        end
+    end
+    M    
+end
+matriz_coluna(6)
+
+#c)
+function matriz_diag(n)
+    M=Matrix{Union{Missing, Int64}}(missing,n,n)
+    for i in 1:n
+        M[i,i]=i
+    end 
+    M   
+end
+matriz_diag(2)
+
+#5)
+
+
+
 
 
 
